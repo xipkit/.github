@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Xip Kit profile art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&display=block" rel="stylesheet">
+<script>
+  const q = new URLSearchParams(location.search);
+  document.documentElement.dataset.theme = q.get('theme') || 'light';
+  document.documentElement.dataset.part = q.get('part') || 'all';
+</script>
+<style>
+:root{--ink:#000;--paper:#fff;--rule:#000;--dim:#555}
+[data-theme=dark]{--ink:#fff;--paper:#000;--dim:#aaa}
+html,body{margin:0;background:transparent;overflow:hidden}
+body{color:var(--ink);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;-webkit-font-smoothing:antialiased}
+[data-part=all] body{overflow:visible;padding:20px;background:#ddd}
+[data-part=all][data-theme=dark] body{background:#0d1117}
+.part{display:none}
+[data-part=all] .part{display:block;margin-bottom:40px}
+[data-part=hero] #hero,[data-part=xip] #xip,[data-part=rip] #rip,[data-part=oss] #oss,[data-part=believe] #believe{display:block}
+.part{width:880px;padding-bottom:16px}
+.part.card{width:432px}
+
+.display{font-family:'Inter Tight',sans-serif;font-weight:800;letter-spacing:-.04em;line-height:1}
+.box{border:3px solid var(--ink);background:var(--paper);box-sizing:border-box}
+.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.kicker i{width:10px;height:10px;background:var(--ink);display:block}
+.pill{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:14px;padding:10px 18px;border:3px solid var(--ink);border-radius:10px;background:var(--paper);box-shadow:3px 3px 0 var(--ink);align-self:flex-start}
+.pill.solid{background:var(--ink);color:var(--paper)}
+.badge{font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border:2px solid var(--ink)}
+ul.sq{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13.5px;line-height:1.55}
+ul.sq li{display:flex;gap:10px}
+ul.sq li::before{content:'■';flex:none}
+
+/* Title bar from the site frame */
+.bar{height:38px;border-bottom:3px solid var(--ink);position:relative;box-sizing:border-box;background:var(--paper)}
+.bar .stripes{position:absolute;left:10px;right:10px;top:7px;height:20px;background:repeating-linear-gradient(var(--ink) 0 2px,var(--paper) 2px 4px)}
+.bar .btn{position:absolute;top:6px;width:20px;height:20px;border:2px solid var(--ink);background:var(--paper);box-sizing:border-box;box-shadow:0 0 0 4px var(--paper)}
+.bar .btn.l{left:10px}.bar .btn.r{right:10px}
+.bar .btn.r::after{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:8px;height:8px;border:2px solid var(--ink);box-sizing:border-box}
+.bar .title{position:absolute;left:50%;top:7px;height:20px;transform:translateX(-50%);background:var(--paper);padding:0 14px;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:16px;letter-spacing:-.01em;line-height:20px}
+
+.cursor{display:inline-block;width:9px;height:17px;background:var(--ink)}
+
+/* Code panel stays black in both themes so the accents read */
+.code{background:#000;color:#fff;border:3px solid var(--ink);font-size:12.5px;line-height:1.7;display:flex;flex-direction:column}
+.code .bar{background:#000;border-color:#fff;--ink:#fff;--paper:#000}
+.code pre{margin:0;padding:18px 20px;font:inherit;white-space:pre}
+.k{font-weight:700}.c{color:#8a8a8a}.s{color:#d6ff3d}.n{color:#2ee6ff}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <pattern id="lt" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="2" height="2" style="fill:var(--ink)"></rect></pattern>
+  <symbol id="cube" viewBox="0 0 130 144" overflow="visible"><g transform="translate(130 0) scale(-1 1)"><path d="M98.6234972,17 L122.863308,30.883646 C124.497556,31.8095325 125.895025,33.0518025 127,34.4941383 L66.2402991,69.6545648 C63.2471339,71.3852625 61.4029152,74.584971 61.4025511,78.048029 L61.4025511,144 C60.2036293,143.689338 59.051369,143.219936 57.9761998,142.604191 L32,127.729521 L32,57.1155481 C32,56.1431345 32.5107028,55.2498168 33.351041,54.7659364 L98.6234972,17 Z M129.851429,41.1177433 C129.944286,41.7867754 130,42.4604534 130,43.1434236 L130,101.302748 C130,106.305406 127.32093,110.924405 122.98,113.405723 L71.9085722,142.606183 C70.8333787,143.22105 69.6810924,143.689781 68.4821436,144 L68.4821436,78.146807 C68.4821436,77.1757814 68.9975008,76.2837387 69.8378579,75.8005489 L129.851429,41.1177433 Z M71.9085722,1.8353427 L91.7335719,13.1717185 L29.9835727,48.853426 C26.9921271,50.5828343 25.149765,53.7777536 25.1503585,57.2349104 L25.1503585,123.771074 L7.02000157,113.410369 C2.67763011,110.928228 -0.00171920518,106.307067 8.27645408e-07,101.302748 L8.27645408e-07,43.1434236 C-0.00171920518,38.1391049 2.67763011,33.5179445 7.02000157,31.0358026 L58.0914295,1.83069664 C62.3725376,-0.611780899 67.627464,-0.611780899 71.9085722,1.8353427 Z"></path></g></symbol>
+  <symbol id="word" viewBox="0 0 587 90"><polygon points="0 90 43.848 90 60.48 66.816 77.112 90 120.96 90 80.514 43.002 115.668 0.036 73.962 0.036 60.48 19.692 46.998 0.036 5.292 0.036 40.446 43.002"></polygon><polygon points="129.465852 90 164.997852 90 164.997852 0.036 129.465852 0.036"></polygon><path d="M186.733705,90 L222.265705,90 L222.265705,62.028 L260.317705,62.028 C285.517705,62.028 294.589705,48.672 294.589705,31.41 C294.589705,11.376 285.265705,0.036 260.065705,0.036 L186.733705,0.036 L186.733705,90 Z M222.265705,21.204 L245.197705,21.204 C254.143705,21.204 257.545705,23.976 257.545705,30.78 C257.545705,37.332 254.143705,40.104 245.197705,40.104 L222.265705,40.104 L222.265705,21.204 Z"></path><polygon points="381.467557 90 428.717557 90 385.121557 34.812 425.315557 0.036 378.191557 0.036 345.179557 31.788 345.179557 0.036 309.647557 0.036 309.647557 90 345.179557 90 345.179557 65.808 356.897557 55.476"></polygon><polygon points="437.601409 90 473.133409 90 473.133409 0.036 437.601409 0.036"></polygon><polygon points="518.557262 90 554.089262 90 554.089262 22.716 586.975262 22.716 586.975262 0.036 485.671262 0.036 485.671262 22.716 518.557262 22.716"></polygon></symbol>
+  <symbol id="bolt" viewBox="0 0 24 24"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></symbol>
+  <pattern id="tile" width="160" height="276" patternUnits="userSpaceOnUse"><use href="#cube" x="8" y="6" width="96" height="106" fill="url(#lt)"></use><use href="#cube" x="88" y="144" width="96" height="106" fill="url(#lt)"></use><use href="#cube" x="-72" y="144" width="96" height="106" fill="url(#lt)"></use></pattern>
+</defs></svg>
+
+<!-- Hero -->
+<section id="hero" class="part">
+  <div class="box" style="width:868px;box-shadow:12px 12px 0 var(--ink)">
+    <div class="bar"><span class="stripes"></span><span class="btn l"></span><span class="title">Xip Kit</span><span class="btn r"></span></div>
+    <div style="display:flex;align-items:center;padding:16px 28px;border-bottom:3px solid var(--ink)">
+      <svg viewBox="0 0 130 144" height="24" style="fill:var(--ink)"><use href="#cube" width="130" height="144"></use></svg>
+      <svg viewBox="0 0 587 90" height="12" style="fill:var(--ink);margin-left:10px"><use href="#word" width="587" height="90"></use></svg>
+      <span style="margin-left:auto;font-size:13px">xipkit.com</span>
+    </div>
+    <div style="position:relative;padding:52px 44px">
+      <svg style="position:absolute;inset:0;width:100%;height:100%"><rect width="100%" height="100%" fill="url(#tile)"></rect></svg>
+      <div class="box" style="position:relative;box-shadow:10px 10px 0 var(--ink);padding:40px 44px;display:flex;flex-direction:column;gap:22px">
+        <div class="kicker"><i></i>Xip Kit · Local-first software for individuals</div>
+        <h1 class="display" style="margin:0;font-size:66px;line-height:.98;letter-spacing:-.045em;text-wrap:balance">Tools for people who make things with AI.</h1>
+        <p style="margin:0;font-size:15.5px;line-height:1.65;max-width:620px">We build small, fast, local-first software for individuals. You own the tools outright, run them on your own machine, and understand them end to end.</p>
+        <div style="display:flex;gap:10px;align-items:center;font-size:13px"><span class="cursor"></span>AI should make you more capable, not make you optional.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Xip -->
+<section id="xip" class="part card">
+  <article class="box" style="width:424px;height:500px;box-shadow:8px 8px 0 var(--ink);padding:28px;display:flex;flex-direction:column;gap:18px">
+    <div style="display:flex;align-items:center;gap:16px">
+      <svg viewBox="0 0 1024 1024" width="64" height="64" style="flex:none"><rect width="1024" height="1024" rx="230" fill="#000" style="stroke:var(--ink);stroke-width:24"></rect><use href="#cube" x="210" y="177" width="604" height="670" fill="#2ee6ff"></use></svg>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="display:flex;align-items:center;gap:10px"><h2 class="display" style="margin:0;font-size:30px;letter-spacing:-.035em">Xip</h2><span class="badge" style="border-style:dashed">Coming soon</span></div>
+        <div style="font-size:13px">xip.dev</div>
+      </div>
+    </div>
+    <p style="margin:0;font-size:14px;line-height:1.6">HyperCard for the AI era. Describe a workflow in plain language. Xip turns it into a kit: a small, self-contained app that runs on your machine and works with your data.</p>
+    <ul class="sq">
+      <li>Each kit stores its data in SQLite on your disk.</li>
+      <li>Your AI agent builds the kit through MCP.</li>
+      <li>Readable Vibescript lets you inspect the logic and control what each kit can access.</li>
+    </ul>
+    <span class="pill" style="margin-top:auto">Tell me when Xip ships</span>
+  </article>
+</section>
+
+<!-- Rip -->
+<section id="rip" class="part card">
+  <article class="box" style="width:424px;height:500px;box-shadow:8px 8px 0 var(--ink);padding:28px;display:flex;flex-direction:column;gap:18px">
+    <div style="display:flex;align-items:center;gap:16px">
+      <svg viewBox="0 0 1024 1024" width="64" height="64" style="flex:none"><rect width="1024" height="1024" rx="230" fill="#000" style="stroke:var(--ink);stroke-width:24"></rect><use href="#bolt" x="188" y="188" width="720" height="720" fill="#d6ff3d" opacity=".35"></use><use href="#bolt" x="152" y="152" width="720" height="720" fill="#d6ff3d"></use></svg>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="display:flex;align-items:center;gap:10px"><h2 class="display" style="margin:0;font-size:30px;letter-spacing:-.035em">Rip</h2><span class="badge" style="background:var(--ink);color:var(--paper)">macOS &amp; Linux</span></div>
+        <div style="font-size:13px">ripeditor.com</div>
+      </div>
+    </div>
+    <p style="margin:0;font-size:14px;line-height:1.6">AI writes more code. Rip helps you review it. It opens a 200k-line file in 41 ms, renders diffs and Markdown clearly, and never phones home.</p>
+    <ul class="sq">
+      <li>Review pull requests and leave inline comments.</li>
+      <li>Preview GitHub-flavored Markdown and Mermaid live.</li>
+      <li>Search the whole project as you type. No index.</li>
+      <li>Switch between branches and worktrees.</li>
+    </ul>
+    <span class="pill solid" style="margin-top:auto">Visit ripeditor.com →</span>
+  </article>
+</section>
+
+<!-- Open source -->
+<section id="oss" class="part">
+  <div class="box" style="width:872px;box-shadow:8px 8px 0 var(--ink);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)">
+    <div style="padding:32px 30px;display:flex;flex-direction:column;gap:16px;border-right:3px solid var(--ink)">
+      <div class="kicker"><i></i>Open source · MIT</div>
+      <h2 class="display" style="margin:0;font-size:40px">Vibescript</h2>
+      <p style="margin:0;font-size:14px;line-height:1.6">A small, Ruby-like workflow language that people can read and AI can write. Embed it in Go or use its REPL and language server.</p>
+      <ul class="sq">
+        <li>Gradual typing, blocks, ranges.</li>
+        <li>Time, Duration and Money built in.</li>
+        <li>Capability-scoped host access.</li>
+      </ul>
+      <span class="pill" style="margin-top:auto">xipkit/vibescript →</span>
+    </div>
+    <div style="padding:26px;display:flex;flex-direction:column;justify-content:center;position:relative">
+      <svg style="position:absolute;inset:0;width:100%;height:100%"><rect width="100%" height="100%" fill="url(#tile)"></rect></svg>
+      <div class="code" style="position:relative;box-shadow:6px 6px 0 var(--ink)">
+        <div class="bar"><span class="stripes"></span><span class="btn l"></span><span class="title" style="font-family:ui-monospace,'SF Mono',monospace;font-weight:400;font-size:12px">overdue.vibe</span><span class="btn r"></span></div>
+<pre><span class="c"># Invoices more than 30 days past due</span>
+<span class="k">def</span> overdue(invoices: array) -&gt; array
+  cutoff = <span class="n">30</span>.days.ago(Time.now)
+
+  invoices.select <span class="k">do</span> |inv|
+    Time.parse(inv[<span class="s">:due_on</span>]) &lt; cutoff
+  <span class="k">end</span>
+<span class="k">end</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Beliefs -->
+<section id="believe" class="part">
+  <div class="box" style="width:872px;box-shadow:8px 8px 0 var(--ink);padding:32px 30px;display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px">
+      <h2 class="display" style="margin:0;font-size:40px">What we believe</h2>
+      <p style="margin:0;font-size:14px;line-height:1.6">Five rules decide what we build and what we cut.</p>
+    </div>
+    <div class="box" style="display:grid;grid-template-columns:minmax(0,1fr) 20px">
+      <ol style="margin:0;padding:0 24px;list-style:none;display:flex;flex-direction:column;background:repeating-linear-gradient(transparent 0 29px,var(--ink) 29px 30px) 0 15px;font-size:14.5px;line-height:30px">
+        <li style="display:flex;gap:16px;padding:15px 0"><span class="display" style="flex:none;width:24px;letter-spacing:0;line-height:30px">1.</span><span>Individuals first. One person should be able to ship a good idea without hiring a team or renting a platform.</span></li>
+        <li style="display:flex;gap:16px;padding:15px 0"><span class="display" style="flex:none;width:24px;letter-spacing:0;line-height:30px">2.</span><span>Local first. Keep your data on your machine. Use the cloud when it helps. Don't live there.</span></li>
+        <li style="display:flex;gap:16px;padding:15px 0"><span class="display" style="flex:none;width:24px;letter-spacing:0;line-height:30px">3.</span><span>AI is a collaborator. Use it to make more, better, stranger things. Don't use it to make people optional.</span></li>
+        <li style="display:flex;gap:16px;padding:15px 0"><span class="display" style="flex:none;width:24px;letter-spacing:0;line-height:30px">4.</span><span>We make money selling useful software and services. Your data and attention aren’t for sale.</span></li>
+        <li style="display:flex;gap:16px;padding:15px 0"><span class="display" style="flex:none;width:24px;letter-spacing:0;line-height:30px">5.</span><span>Small, fast, finished. A tool should open instantly, do its job, and get out of your way.</span></li>
+      </ol>
+      <div style="border-left:3px solid var(--ink);display:flex;flex-direction:column"><span style="height:20px;border-bottom:3px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:9px">▲</span><span style="flex:1;background:repeating-conic-gradient(var(--ink) 0 25%,var(--paper) 0 50%) 0 0/4px 4px"></span><span style="height:20px;border-top:3px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:9px">▼</span></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
